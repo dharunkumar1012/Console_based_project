@@ -30,7 +30,7 @@ def main():
         elif choice == "5":
             view_all_subjects()
         elif choice == "6":
-            delete_subject()
+            delete_subjects()
         elif choice == "7":
             enter_marks()
         elif choice == "8":
