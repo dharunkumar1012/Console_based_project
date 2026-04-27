@@ -30,7 +30,7 @@ def view_all_subjects():
     else:
         print("|n--- All Subjects ---")
         for subject in subjects:
-            print(f"ID: {subject[0]} | Subject: {subject[1]} | Max Marks: {subject[2]}")
+            print(f"ID: {subject[0]} | Subject: {subject[1]} | Max Marks: {subject[2]}") # type: ignore
     cursor.close()
     connection.close()
     

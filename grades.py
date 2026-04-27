@@ -53,12 +53,12 @@ def view_report_card():
         total_marks = 0
         total_max = 0
         for row in result:
-            percentage = calculate_percentage(row[1], row[2])
+            percentage = calculate_percentage(row[1], row[2]) # type: ignore
             grade = calculate_grade(percentage)
             print(
-                f"Subject: {row[0]} | Marks: {row[1]} | Percentage: {percentage}% | Grade: {grade}")
-            total_marks += row[1]
-            total_max += row[2]
+                f"Subject: {row[0]} | Marks: {row[1]} | Percentage: {percentage}% | Grade: {grade}") # type: ignore
+            total_marks += row[1] # type: ignore
+            total_max += row[2] # type: ignore
 
         total_percentage = calculate_percentage(total_marks, total_max)
         total_grade = calculate_grade(total_percentage)
@@ -91,10 +91,10 @@ def leaderboard():
     print("\n--- Leaderboard ---")
     rank = 1
     for row in result:
-        percentage = calculate_percentage(row[1], row[2])
+        percentage = calculate_percentage(row[1], row[2]) # type: ignore
         grade = calculate_grade(percentage)
         print(
-            f"Rank: {rank} | Name: {row[0]} | Total: {row[1]}/{row[2]} | Percentage: {percentage}% | Grade: {grade}")
+            f"Rank: {rank} | Name: {row[0]} | Total: {row[1]}/{row[2]} | Percentage: {percentage}% | Grade: {grade}") # type: ignore
         rank += 1
 
     cursor.close()
